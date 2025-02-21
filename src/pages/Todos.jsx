@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import TodoCard from "@/components/TodoCard";
+import TodoCardWrapper from "@/components/TodoCardWrapper";
 import axios from "axios";
 
 const Todos = () => {
@@ -30,24 +22,16 @@ const Todos = () => {
   const reversedData = [...data].reverse();
 
   return (
-    <div>
-      <Card className="w-[750px]">
-        <CardHeader>
-          <CardTitle>To do's </CardTitle>
-          <CardDescription>Here are the of you to do's</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-col gap-y-5 items-center">
-            {reversedData.map((todo, index) => (
-              <TodoCard key={index} data={todo} />
-            ))}
-          </div>
-        </CardContent>
-        <CardFooter className="flex justify-between">
-          <h1>Made with ♥ by Jan Wayne Sepe</h1>
-        </CardFooter>
-      </Card>
-    </div>
+    <TodoCardWrapper
+      title="Your Todos"
+      description="Here are all your pending tasks"
+    >
+      <div className="space-y-4 width-full">
+        {reversedData.map((todo, index) => (
+          <TodoCard key={index} data={todo} />
+        ))}
+      </div>
+    </TodoCardWrapper>
   );
 };
 

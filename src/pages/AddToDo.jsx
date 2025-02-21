@@ -1,18 +1,11 @@
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import axios from "axios";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useNavigate } from "react-router-dom";
+import TodoCardWrapper from "@/components/TodoCardWrapper";
 
 const AddTodo = () => {
   const [title, setTitle] = useState("");
@@ -44,37 +37,44 @@ const AddTodo = () => {
   };
 
   return (
-    <div>
-      <div>
-        <Card className="w-[750px]">
-          <CardHeader>
-            <CardTitle>Add To Do</CardTitle>
-            <CardDescription>Fill all fields to add to do</CardDescription>
-          </CardHeader>
-          <CardContent className="flex flex-col  py-10 gap-y-5 w-full">
-            <div className="gap-y-2">
-              <Label>Title</Label>
-              <Input value={title} onChange={(e) => setTitle(e.target.value)} />
-            </div>
-            <div className="gap-y-2">
-              <Label>To do Description</Label>
-              <Textarea
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              />
-            </div>
-            <div className="gap-y-2">
-              <Label>Date</Label>
-              <Input value={date} onChange={(e) => setDate(e.target.value)} />
-            </div>
-            <Button onClick={handleSubmit}>Add To Do</Button>
-          </CardContent>
-          <CardFooter className="flex justify-between">
-            <h1>Made with ♥ by Jan Wayne Sepe</h1>
-          </CardFooter>
-        </Card>
+    <TodoCardWrapper
+      title={"Add New Todo"}
+      description={"Fill all fields to create a new todo"}
+    >
+      <div className="space-y-6">
+        <div className="space-y-2">
+          <Label className="text-gray-700 font-medium">Title</Label>
+          <Input
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            className="focus:ring-2 focus:ring-pink-500"
+          />
+        </div>
+        <div className="space-y-2">
+          <Label className="text-gray-700 font-medium">Description</Label>
+          <Textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            className="focus:ring-2 focus:ring-pink-500 h-32"
+          />
+        </div>
+        <div className="space-y-2">
+          <Label className="text-gray-700 font-medium">Date</Label>
+          <Input
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            className="focus:ring-2 focus:ring-pink-500"
+          />
+        </div>
+        <Button
+          onClick={handleSubmit}
+          className="w-full bg-pink-600 hover:bg-pink-700 text-white py-3 text-lg"
+        >
+          {"Add Todo"}
+        </Button>
       </div>
-    </div>
+    </TodoCardWrapper>
   );
 };
 
