@@ -1,0 +1,34 @@
+{
+  "todolist": [
+    {
+      "id": "1",
+      "title": "Complete Laravel CRUD Setup",
+      "description": "Set up models, controllers, and routes for a CRUD application in Laravel.",
+      "date": "2025-02-22"
+    },
+    {
+      "id": "2",
+      "title": "Sketch New Anime Character",
+      "description": "Create a black-and-white ballpoint sketch of a favorite anime character.",
+      "date": "2025-02-23"
+    },
+    {
+      "id": "3",
+      "title": "Study Subnetting",
+      "description": "Review subnet masks and CIDR notation for better understanding of networking.",
+      "date": "2025-02-24"
+    },
+    {
+      "id": "4",
+      "title": "Test Car Battery Performance",
+      "description": "Check voltage levels and charging cycles for a car battery project.",
+      "date": "2025-02-25"
+    },
+    {
+      "id": "5",
+      "title": "Optimize Laravel Queries",
+      "description": "Improve database query efficiency in Laravel using Eloquent and query builders.",
+      "date": "2025-02-26"
+    }
+  ]
+}
