@@ -10,8 +10,8 @@ import {
 } from "@/components/ui/card";
 import axios from "axios";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { useNavigate } from "react-router-dom";
 
 const AddTodo = () => {
