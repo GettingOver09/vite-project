@@ -14,15 +14,15 @@
     },
     {
       "id": "3",
-      "title": "Study Subnetting",
+      "title": "Study Subnettings",
       "description": "Review subnet masks and CIDR notation for better understanding of networking.",
       "date": "2025-02-24"
     },
     {
-      "title": "Test Car Battery Performances",
-      "description": "Check voltage levels and charging cycles for a car battery projects.",
-      "date": "2025-02-26",
-      "id": "4"
+      "id": "4",
+      "title": "Test Car Battery Performance AHAHHA",
+      "description": "Check voltage levels and charging cycles for a car battery project. AHHAHA",
+      "date": "2025-02-2 HAHAH"
     }
   ]
 }
