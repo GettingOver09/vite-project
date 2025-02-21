@@ -19,14 +19,19 @@ const AddTodo = () => {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
 
-  const id = Math.floor(Math.random() * 10);
-
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/todolist", {
-        id: id.toString(),
+      const { data: todos } = await axios.get("http://localhost:3000/todolist");
+
+      const newId =
+        todos.length > 0
+          ? Math.max(...todos.map((todo) => parseInt(todo.id))) + 1
+          : 1;
+
+      await axios.post("http://localhost:3000/todolist", {
+        id: newId.toString(),
         title,
         description,
         date,
@@ -34,7 +39,7 @@ const AddTodo = () => {
 
       navigate("/");
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 

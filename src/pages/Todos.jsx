@@ -8,7 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import TodoCard from "@/components/TodoCard";
 import axios from "axios";
 
@@ -28,6 +27,8 @@ const Todos = () => {
     fetchTodo();
   }, []);
 
+  const reversedData = [...data].reverse();
+
   return (
     <div>
       <Card className="w-[750px]">
@@ -37,7 +38,7 @@ const Todos = () => {
         </CardHeader>
         <CardContent>
           <div className="flex flex-col gap-y-5 items-center">
-            {data.map((todo, index) => (
+            {reversedData.map((todo, index) => (
               <TodoCard key={index} data={todo} />
             ))}
           </div>

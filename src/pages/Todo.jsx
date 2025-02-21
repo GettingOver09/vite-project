@@ -54,10 +54,18 @@ const Todo = () => {
         <Card className="w-[750px]">
           <CardHeader>
             <CardTitle className="flex justify-between">
-              <h1>{todo.title}</h1>{" "}
-              <Button onClick={handleDelete} variant="destructive" className>
-                Delete To Do
-              </Button>
+              <h1>{todo.title}</h1>
+              <div className="flex gap-2">
+                <Button
+                  onClick={() => navigate(`/update-todo/${id}`)}
+                  variant="secondary"
+                >
+                  Update To Do
+                </Button>
+                <Button onClick={handleDelete} variant="destructive">
+                  Delete To Do
+                </Button>
+              </div>
             </CardTitle>
             <CardDescription>{todo.date}</CardDescription>
           </CardHeader>

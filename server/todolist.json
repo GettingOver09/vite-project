@@ -19,16 +19,10 @@
       "date": "2025-02-24"
     },
     {
-      "id": "4",
-      "title": "Test Car Battery Performance",
-      "description": "Check voltage levels and charging cycles for a car battery project.",
-      "date": "2025-02-25"
-    },
-    {
-      "id": "5",
-      "title": "Optimize Laravel Queries",
-      "description": "Improve database query efficiency in Laravel using Eloquent and query builders.",
-      "date": "2025-02-26"
+      "title": "Test Car Battery Performances",
+      "description": "Check voltage levels and charging cycles for a car battery projects.",
+      "date": "2025-02-26",
+      "id": "4"
     }
   ]
 }
